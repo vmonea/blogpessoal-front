@@ -12,7 +12,7 @@ function Navbar() {
 
         handleLogout()
         alert('O Usuário foi desconectado com sucesso!')
-        navigate('/login')
+        navigate('/')
     }
     
     return (
@@ -21,16 +21,13 @@ function Navbar() {
                 flex justify-center py-4'>
 
                 <div className="container flex justify-between text-lg">
-                    <Link to='/home' className="text-2xl font-bold">BLOG PESSOAL</Link> 
+                    <Link to='/home' className="text-2xl font-bold">Blog Pessoal</Link>
 
                     <div className='flex gap-4'>
-                        Postagens
+                        <Link to='/postagens' className='hover:underline'>Postagens</Link>
                         <Link to='/temas' className='hover:underline'>Temas</Link>
-
-                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar Tema</Link>
-
+                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
                         Perfil
-                        
                         <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
                     </div>
                 </div>
